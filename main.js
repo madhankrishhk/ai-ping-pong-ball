@@ -9,7 +9,7 @@ var paddle1Y;
 var  playerscore =0;
 
 var pcscore =0;
-//ball x and y and speedx speed y and radius
+
 var ball = {
     x:350/2,
     y:480/2,
@@ -24,7 +24,7 @@ scoreRightWrist = 0;
 
 game_status = "";
 
-//var doggo_theme = new Audio("https://saantonandre.github.io/doggo_theme.wav");
+
 
  function preload() {
   ball_touch_paddel = loadSound("ball_touch_paddel.wav");
@@ -61,12 +61,12 @@ function gotPoses(results)
 
 function startGame()
 {
-  game_status = "start";
+  game_status = "start"; 
   document.getElementById("status").innerHTML = "Game Is Loading";
 }
 
 function draw(){
-
+if(game_status == "start")
   background(0); 
   image(video, 0, 0, 700, 600);
 
